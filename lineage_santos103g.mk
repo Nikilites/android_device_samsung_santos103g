@@ -14,13 +14,25 @@
 # limitations under the License.
 #
 
+# Includi i suoni di sistema, se disponibili
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
+
+# Base AOSP per la telefonia
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Includi la configurazione comune di LineageOS per telefoni
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Configurazione specifica del dispositivo
+$(call inherit-product, device/samsung/santos103g/device.mk)
 
 PRODUCT_NAME := lineage_santos103g
 PRODUCT_DEVICE := santos103g
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Lineage on Santos103G
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := GT-P5200
+PRODUCT_MANUFACTURER := Samsung
 
-$(call inherit-product, device/samsung/santos103g/device.mk)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=santos103gxx \
+    BUILD_FINGERPRINT="samsung/santos103gxx/santos103g:4.4.2/KOT49H/P5200XXUBOB1:user/release-keys" \
+    PRIVATE_BUILD_DESC="santos103gxx-user 4.4.2 KOT49H P5200XXUBOB1 release-keys"
