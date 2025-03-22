@@ -14,19 +14,13 @@
 # limitations under the License.
 #
 
-# Sample: This is where we'd set a backup provider if we had one
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
-
-# Use 44.1 kHz UI sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
-
-# Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := full_santos103g
+PRODUCT_NAME := lineage_santos103g
 PRODUCT_DEVICE := santos103g
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on Santos103G
+PRODUCT_MODEL := Lineage on Santos103G
 PRODUCT_MANUFACTURER := samsung
 
 $(call inherit-product, device/samsung/santos103g/device.mk)
