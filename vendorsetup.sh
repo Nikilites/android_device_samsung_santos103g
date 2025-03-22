@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_santos103g-userdebug
+COMMON_LUNCH_CHOICES += \
+    lineage_santos103g-userdebug \
