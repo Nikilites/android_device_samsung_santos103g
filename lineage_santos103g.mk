@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-# Includi i suoni di sistema, se disponibili
+# Include i suoni di sistema, se disponibili
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage13.mk)
 
 # Base AOSP per la telefonia
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Includi la configurazione comune di LineageOS per telefoni
+# Include la configurazione comune di LineageOS per telefoni
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Configurazione specifica del dispositivo
