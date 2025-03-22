@@ -15,4 +15,4 @@
 #
 
 COMMON_LUNCH_CHOICES += \
-    lineage_santos103g-userdebug \
+    lineage_santos103g-userdebug
