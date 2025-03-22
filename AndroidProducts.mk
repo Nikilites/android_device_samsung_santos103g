@@ -15,5 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/full_santos103g.mk \
+     $(LOCAL_DIR)/lineage_santos103g.mk \
      $(LOCAL_DIR)/aosp_santos103g.mk
